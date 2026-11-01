@@ -253,12 +253,61 @@ html{scroll-padding-top:150px}
 
 /* ===== Rodapé com lema ===== */
 .lema{flex:1 1 100%;max-width:none!important;text-align:center;font:italic 1.25rem/1.4 var(--serif);color:var(--gold2);padding-bottom:16px;margin-bottom:6px!important;border-bottom:1px solid #ffffff1f}
+
+/* ===== Legibilidade: letras maiores e dourado com mais contraste ===== */
+:root{--gold-text:#85600f}
+body{font-size:16px}
+.topline{font-size:.8rem}
+.navlinks a{font-size:.84rem}
+.eyebrow{font-size:.78rem;color:var(--gold-text)}
+.empresas .eyebrow,.eventos .eyebrow,.contact .eyebrow{color:var(--gold2)}
+.area summary p{font-size:.9rem}.area li{font-size:.88rem}.area .lead{font-size:.92rem}
+.area h4,.rlist h5{font-size:.74rem;color:var(--gold-text)}
+.area-cta{color:var(--gold-text);font-size:.86rem}
+.note{font-size:.8rem}
+.step2 p{font-size:.9rem}.step2 .num,.num{color:var(--gold-text)}
+.aboutcopy p,.linha p{font-size:.98rem}
+.valores2 p{font-size:.9rem}
+.chips a{font-size:.86rem}
+.rlist a{font-size:.88rem}
+.emp p{font-size:.92rem}.empcta p{font-size:.86rem}
+.citem{font-size:.92rem}
+.contato2 p{font-size:.96rem}.contato2 .parc{font-size:.88rem}
+.proofitem strong{font-size:.9rem}.proofitem small{font-size:.8rem}
+.verse cite{font-size:.76rem;color:var(--gold-text)}
+.credentials{font-size:.82rem}
+footer{font-size:.8rem}.lema{font-size:1.3rem}
+.rec summary{color:var(--gold-text)}
+.hero-copy>p{font-size:1.05rem}
+.section-head p{font-size:1rem}
+@media(max-width:600px){.citem{font-size:.9rem}.aboutcopy p,.linha p{font-size:.96rem}}
+
+/* ===== Perguntas frequentes ===== */
+.faq{background:linear-gradient(180deg,#fff,#fbf8f2)}
+.faqlist{max-width:820px;display:grid;gap:10px}
+.faqi{border:1px solid var(--line);border-top:2px solid var(--gold2);background:#fff;box-shadow:0 6px 18px rgba(33,25,13,.05)}
+.faqi summary{cursor:pointer;list-style:none;padding:17px 48px 17px 20px;position:relative;font:600 1.3rem/1.25 var(--serif);color:var(--ink)}
+.faqi summary::-webkit-details-marker{display:none}
+.faqi summary:after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-52%);color:var(--gold-text);font:1.7rem var(--serif)}
+.faqi[open] summary:after{content:"\2212"}
+.faqi p{margin:0;padding:0 20px 18px;color:var(--muted);font-size:.94rem}
+
+/* ===== Política de privacidade ===== */
+#priv{border:0;background:#fff;width:min(760px,96vw);max-height:90vh;margin:auto;padding:0;overflow:auto}
+#priv::backdrop{background:rgba(33,25,13,.9)}
+#fecharPriv{background:none;border:1px solid var(--line);width:40px;height:40px;border-radius:50%;font-size:1.5rem;line-height:1;cursor:pointer;color:var(--ink)}
+.privtxt{padding:4px 24px 26px}
+.privtxt h4{font:600 1.35rem var(--serif);margin:18px 0 4px;color:var(--ink)}
+.privtxt p{font-size:.92rem;color:var(--muted);margin:0 0 8px}
+.privlink{color:var(--gold2);border-bottom:1px solid var(--gold2)}
+@media(max-width:600px){#priv{width:100vw;max-height:100vh}.privtxt{padding:4px 16px 22px}}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2321190d'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23c49a43' text-anchor='middle'%3EGM%3C/text%3E%3C/svg%3E">
 <meta name="robots" content="index,follow">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LegalService","name":"Gilberto Menegoy | Advocacia","description":"Advogado OAB/RJ 269.678. Atendimento presencial no Rio de Janeiro e online em todo o Brasil.","telephone":"+55-21-98638-3729","email":"gmenegoyadv@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Rua da Assembleia, 61, 9º andar","addressLocality":"Rio de Janeiro","addressRegion":"RJ","addressCountry":"BR"},"sameAs":["https://www.instagram.com/gilbertomenegoy/","https://www.linkedin.com/in/gilberto-menegoy-03b5b821b/"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Como funciona a primeira conversa?", "acceptedAnswer": {"@type": "Answer", "text": "Você conta brevemente a sua situação pelo WhatsApp. A partir disso, avaliamos quais documentos são necessários e quais caminhos podem existir. Cada caso exige análise individual, e não há garantia de resultado."}}, {"@type": "Question", "name": "Vocês atendem online?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. O atendimento é presencial no Rio de Janeiro e online para todo o Brasil, por WhatsApp, ligação ou videochamada, conforme a sua preferência."}}, {"@type": "Question", "name": "Quais documentos devo reunir?", "acceptedAnswer": {"@type": "Answer", "text": "Depende do caso. De forma geral, ajudam documento de identificação, comprovante de residência e tudo o que se relaciona à situação, como contratos, mensagens, notificações e comprovantes. Na primeira conversa indicamos o que é necessário."}}, {"@type": "Question", "name": "Como são definidos os honorários?", "acceptedAnswer": {"@type": "Answer", "text": "Os honorários são combinados de forma clara e por escrito antes do início do trabalho, conforme a complexidade do caso e as regras da OAB."}}, {"@type": "Question", "name": "O escritório atende empresas?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Há consultoria jurídica preventiva e palestras para empresas e colaboradores, em temas como riscos trabalhistas, segurança do trabalho, compliance e LGPD. Veja a seção “Para empresas”."}}, {"@type": "Question", "name": "Meus dados e informações ficam protegidos?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. O sigilo profissional é um dever do advogado, e os dados são tratados conforme a LGPD. Mais detalhes na Política de Privacidade, no final da página."}}]}</script>
 </head>
 <body>
 <div class="topo"><div class="topline"><div class="wrap"><span>Atendimento presencial no Rio de Janeiro e online em todo o Brasil</span></div></div>
@@ -309,6 +358,7 @@ html{scroll-padding-top:150px}
 <div class="aboutcopy reveal"><span class="eyebrow">Sobre</span><h2>Experiência construída entre o jurídico e a gestão.</h2>
 <p>Minha trajetória começou nos bastidores do universo jurídico: há mais de 15 anos atuo em rotinas jurídicas e administrativas, com suporte jurídico, coordenação de equipes e processos administrativos, além de anos no mercado de licitações.</p>
 <p>Hoje levo essa visão prática para a advocacia, com atenção a benefícios previdenciários, contratos e demandas administrativas. Também ministro palestras para jovens aprendizes, empresas e colaboradores e presto consultoria jurídica preventiva a empresas, em temas como riscos trabalhistas, segurança do trabalho, compliance e LGPD.</p></div>
+<!-- FORMAÇÃO E CREDENCIAIS: quando tiver os dados, inclua aqui um bloco, ex.: <div class="cred"><h3>Formação</h3><p>Graduação em Direito — instituição, ano. Pós-graduação — área, instituição.</p></div> -->
 <div class="valores2 reveal"><div><h3>Ética</h3><p>Sigilo e respeito ao Código de Ética da OAB.</p></div><div><h3>Transparência</h3><p>Clareza sobre riscos, prazos e custos, sem garantia de resultado.</p></div><div><h3>Agilidade</h3><p>Retorno rápido e acompanhamento constante.</p></div></div>
 </div></section>
 <section class="eventos compacta" id="eventos"><div class="wrap linha reveal">
@@ -317,6 +367,10 @@ html{scroll-padding-top:150px}
 <section class="uteis compacta" id="recursos"><div class="wrap">
 <div class="linha reveal"><div><span class="eyebrow">Serviços úteis</span><h2>Consulte por conta própria.</h2><p>Links oficiais para acompanhar benefícios, processos, tribunais e direitos do consumidor.</p></div><div class="chips"><a href="https://www3.tjrj.jus.br/consultaprocessual/" target="_blank" rel="noopener">Processos no TJRJ</a><a href="https://www.gov.br/receitafederal/" target="_blank" rel="noopener">Receita Federal</a><a href="https://eproc.jfrj.jus.br/" target="_blank" rel="noopener">e-Proc</a><a href="https://www.gov.br/pt-br" target="_blank" rel="noopener">Portal Gov.br</a><a href="https://tjrj.pje.jus.br/" target="_blank" rel="noopener">PJe</a><a href="https://meu.inss.gov.br/" target="_blank" rel="noopener">Meu INSS</a><a href="https://www.consumidor.gov.br/" target="_blank" rel="noopener">Consumidor.gov.br</a><a href="https://www.serasa.com.br/limpa-nome-online/" target="_blank" rel="noopener">Serasa</a></div></div>
 <div class="recgrid reveal"><details class="rbtn"><summary>Legislação</summary><div class="rlist"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener">Constituição Federal</a><a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm" target="_blank" rel="noopener">Código Civil</a><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm" target="_blank" rel="noopener">Código de Processo Civil</a><a href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm" target="_blank" rel="noopener">Código de Defesa do Consumidor</a><a href="https://www.planalto.gov.br/ccivil_03/leis/l9656.htm" target="_blank" rel="noopener">Lei dos Planos de Saúde</a><a href="https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm" target="_blank" rel="noopener">Código Tributário Nacional</a><a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm" target="_blank" rel="noopener">Lei de Licitações (14.133/2021)</a><a href="https://www.planalto.gov.br/ccivil_03/leis/l8906.htm" target="_blank" rel="noopener">Estatuto da Advocacia</a></div></details><details class="rbtn"><summary>Tribunais e sistemas</summary><div class="rlist"><h5>Justiça Estadual (TJRJ)</h5><a href="https://www.tjrj.jus.br/" target="_blank" rel="noopener">Tribunal de Justiça do RJ</a><a href="https://www3.tjrj.jus.br/consultaprocessual/" target="_blank" rel="noopener">Consulta processual TJRJ</a><a href="https://tjrj.pje.jus.br/" target="_blank" rel="noopener">PJe — TJRJ</a><a href="https://eproc1g.tjrj.jus.br/" target="_blank" rel="noopener">e-Proc — TJRJ</a><h5>Justiça Federal (RJ/ES)</h5><a href="https://www.trf2.jus.br/" target="_blank" rel="noopener">TRF da 2ª Região</a><a href="https://eproc.trf2.jus.br/" target="_blank" rel="noopener">e-Proc — TRF2</a><a href="https://eproc.jfrj.jus.br/" target="_blank" rel="noopener">e-Proc — Justiça Federal do RJ</a><a href="https://www.jfrj.jus.br/" target="_blank" rel="noopener">Justiça Federal do RJ (JFRJ)</a><h5>Justiça do Trabalho</h5><a href="https://www.trt1.jus.br/" target="_blank" rel="noopener">TRT da 1ª Região (RJ)</a><a href="https://pje.trt1.jus.br/primeirograu/" target="_blank" rel="noopener">PJe — TRT1</a><a href="https://www.tst.jus.br/" target="_blank" rel="noopener">Tribunal Superior do Trabalho</a><h5>Outros tribunais</h5><a href="https://www.tre-rj.jus.br/" target="_blank" rel="noopener">TRE-RJ (Eleitoral)</a><a href="https://www.stj.jus.br/" target="_blank" rel="noopener">Superior Tribunal de Justiça</a><a href="https://portal.stf.jus.br/" target="_blank" rel="noopener">Supremo Tribunal Federal</a><a href="https://www.cnj.jus.br/" target="_blank" rel="noopener">Conselho Nacional de Justiça</a></div></details><details class="rbtn"><summary>Jurisprudência</summary><div class="rlist"><a href="https://jurisprudencia.stf.jus.br/" target="_blank" rel="noopener">Jurisprudência do STF</a><a href="https://scon.stj.jus.br/SCON/" target="_blank" rel="noopener">Jurisprudência do STJ</a><a href="https://www.tjrj.jus.br/" target="_blank" rel="noopener">Jurisprudência do TJRJ (portal do tribunal)</a><a href="https://www.oabrj.org.br/" target="_blank" rel="noopener">OAB/RJ</a></div></details><details class="rbtn"><summary>Crédito, fiscal e órgãos</summary><div class="rlist"><a href="https://www.serasa.com.br/limpa-nome-online/" target="_blank" rel="noopener">Serasa — consulta e Limpa Nome</a><a href="https://www.bcb.gov.br/meubc/registrato" target="_blank" rel="noopener">Registrato (Banco Central)</a><a href="https://cav.receita.fazenda.gov.br/" target="_blank" rel="noopener">e-CAC — Receita Federal</a><a href="https://servicos.receita.fazenda.gov.br/servicos/cpf/consultasituacao/consultapublica.asp" target="_blank" rel="noopener">Situação cadastral do CPF</a><a href="https://www.mprj.mp.br/" target="_blank" rel="noopener">MPRJ — Ministério Público do RJ</a><a href="https://defensoria.rj.def.br/" target="_blank" rel="noopener">Defensoria Pública do RJ</a></div></details></div>
+</div></section>
+<section class="faq" id="duvidas"><div class="wrap">
+<div class="section-head reveal"><span class="eyebrow">Perguntas frequentes</span><h2>Dúvidas comuns antes de entrar em contato.</h2></div>
+<div class="faqlist reveal"><details class="faqi"><summary>Como funciona a primeira conversa?</summary><p>Você conta brevemente a sua situação pelo WhatsApp. A partir disso, avaliamos quais documentos são necessários e quais caminhos podem existir. Cada caso exige análise individual, e não há garantia de resultado.</p></details><details class="faqi"><summary>Vocês atendem online?</summary><p>Sim. O atendimento é presencial no Rio de Janeiro e online para todo o Brasil, por WhatsApp, ligação ou videochamada, conforme a sua preferência.</p></details><details class="faqi"><summary>Quais documentos devo reunir?</summary><p>Depende do caso. De forma geral, ajudam documento de identificação, comprovante de residência e tudo o que se relaciona à situação, como contratos, mensagens, notificações e comprovantes. Na primeira conversa indicamos o que é necessário.</p></details><details class="faqi"><summary>Como são definidos os honorários?</summary><p>Os honorários são combinados de forma clara e por escrito antes do início do trabalho, conforme a complexidade do caso e as regras da OAB.</p></details><details class="faqi"><summary>O escritório atende empresas?</summary><p>Sim. Há consultoria jurídica preventiva e palestras para empresas e colaboradores, em temas como riscos trabalhistas, segurança do trabalho, compliance e LGPD. Veja a seção “Para empresas”.</p></details><details class="faqi"><summary>Meus dados e informações ficam protegidos?</summary><p>Sim. O sigilo profissional é um dever do advogado, e os dados são tratados conforme a LGPD. Mais detalhes na Política de Privacidade, no final da página.</p></details></div>
 </div></section>
 <section class="contact" id="contato"><div class="wrap contato2">
 <div class="reveal"><span class="eyebrow">Contato</span><h2>Vamos conversar sobre sua demanda?</h2><p>Conte brevemente sua situação pelo WhatsApp para avaliarmos os próximos passos.</p><a class="btn" href="https://wa.me/5521986383729?text=Ol%C3%A1%2C%20Dr.%20Gilberto.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">FALAR PELO WHATSAPP ↗</a><p class="parc">Parcerias com advogados, contadores e empresas: <a href="https://wa.me/5521986383729?text=Ol%C3%A1%2C%20Dr.%20Gilberto.%20Tenho%20interesse%20em%20uma%20parceria." target="_blank" rel="noopener">fale conosco</a>.</p></div>
@@ -328,7 +382,7 @@ html{scroll-padding-top:150px}
 <a class="citem" href="https://www.linkedin.com/in/gilberto-menegoy-03b5b821b/" target="_blank" rel="noopener"><span class="cic in"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="4" height="12"/><circle cx="5" cy="5" r="2.2"/><path d="M10 9h3.8v1.8c.6-1.1 2-2.1 4-2.1 3.4 0 4.2 2.2 4.2 5.2V21h-4v-6.2c0-1.5-.1-2.8-1.8-2.8s-2.2 1.3-2.2 2.7V21h-4z"/></svg></span>LinkedIn</a></div>
 </div></div></section>
 </main>
-<footer><div class="wrap foot"><p class="lema">A justiça sustentada com integridade é o único caminho para a verdadeira paz.</p><p>© <span id="year"></span> Gilberto Menegoy • Advogado • OAB/RJ 269.678. Todos os direitos reservados.</p><p>As informações deste site são institucionais e não substituem consulta e análise jurídica individualizada.</p></div></footer>
+<footer><div class="wrap foot"><p class="lema">A justiça sustentada com integridade é o único caminho para a verdadeira paz.</p><p>© <span id="year"></span> Gilberto Menegoy • Advogado • OAB/RJ 269.678. Todos os direitos reservados.</p><p><a href="#" id="abrirPriv" class="privlink">Política de Privacidade</a> • As informações deste site são institucionais e não substituem consulta e análise jurídica individualizada.</p></div></footer>
 <!-- Galeria em tela cheia (abre ao clicar no botão) -->
 <dialog id="gal" aria-label="Fotos dos eventos">
   <div class="gal-topo"><h3>Palestras e eventos</h3><button id="fecharGal" type="button" aria-label="Fechar galeria">&times;</button></div>
@@ -351,6 +405,23 @@ html{scroll-padding-top:150px}
   </div>
   </div>
 </dialog>
+<dialog id="priv" aria-label="Política de Privacidade">
+<div class="gal-topo"><h3>Política de Privacidade</h3><button id="fecharPriv" type="button" aria-label="Fechar">&times;</button></div>
+<div class="privtxt">
+<p><strong>Controlador:</strong> Gilberto Menegoy, advogado, OAB/RJ 269.678 — gmenegoyadv@gmail.com.</p>
+<h4>Quais dados são tratados</h4>
+<p>Este site é institucional e não possui formulários nem área de login. Os dados pessoais só chegam ao escritório quando você decide entrar em contato por WhatsApp, e-mail, telefone ou redes sociais, como nome, telefone e as informações que você mesmo compartilhar.</p>
+<h4>Finalidade e base legal</h4>
+<p>Os dados são usados para responder ao seu contato, avaliar a sua demanda e, se houver contratação, prestar os serviços jurídicos (execução de contrato, procedimentos preliminares e exercício regular de direitos, conforme a LGPD, Lei 13.709/2018).</p>
+<h4>Compartilhamento e sigilo</h4>
+<p>As informações não são vendidas nem divulgadas. Estão protegidas pelo sigilo profissional da advocacia e podem ser compartilhadas apenas quando necessário para o serviço contratado ou por obrigação legal.</p>
+<h4>Serviços de terceiros</h4>
+<p>O site carrega fontes do Google Fonts e possui links para plataformas externas (WhatsApp, Instagram, LinkedIn, tribunais e órgãos públicos), que têm políticas de privacidade próprias. O site não utiliza cookies de publicidade.</p>
+<h4>Seus direitos</h4>
+<p>Você pode solicitar confirmação de tratamento, acesso, correção, anonimização, eliminação (quando cabível) e informações sobre o uso dos seus dados, pelo e-mail acima.</p>
+<h4>Retenção</h4>
+<p>Os dados são mantidos pelo tempo necessário às finalidades acima e aos prazos legais e éticos da advocacia.</p>
+</div></dialog>
 <dialog id="lb"><img alt=""><p></p></dialog>
 <a class="whatsapp" href="https://wa.me/5521986383729?text=Ol%C3%A1%2C%20Dr.%20Gilberto.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.2A12.7 12.7 0 0 0 5.1 22.4L3.4 28.8l6.6-1.7A12.7 12.7 0 1 0 16 3.2zm0 23.1a10.4 10.4 0 0 1-5.3-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.4 10.4 0 1 1 16 26.3zm5.7-7.8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.5 8.5 0 0 1-2.5-1.5 9.4 9.4 0 0 1-1.7-2.1c-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.2 1.4 3.4 2.4 3.7 5.8 5.1c.8.3 1.4.5 1.9.6.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.6.3-.8.3-1.5.2-1.6s-.3-.3-.6-.4z"/></svg></a>
 <script>
@@ -366,5 +437,9 @@ document.getElementById('fecharGal').addEventListener('click',()=>gal.close());
 gal.addEventListener('click',e=>{if(e.target===gal)gal.close();});
 document.querySelectorAll('.gi').forEach(b=>b.addEventListener('click',()=>{const im=b.querySelector('img'),l=lb.querySelector('img');l.src=im.src;l.alt=im.alt;lb.querySelector('p').textContent=b.dataset.cap;lb.showModal();}));
 lb.addEventListener('click',()=>lb.close());
+const priv=document.getElementById('priv');
+document.getElementById('abrirPriv').addEventListener('click',e=>{e.preventDefault();priv.showModal();});
+document.getElementById('fecharPriv').addEventListener('click',()=>priv.close());
+priv.addEventListener('click',e=>{if(e.target===priv)priv.close();});
 </script>
 </body></html>
