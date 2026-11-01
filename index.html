@@ -1,747 +1,356 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gilberto Menegoy | Advocacia e Consultoria Jurídica</title>
-    <meta name="description" content="Advocacia pautada na ética, transparência e responsabilidade técnica. Atendimento presencial e online. OAB/RJ 269.678.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1a2421">
+  <title>Gilberto Menegoy | Advocacia e Consultoria</title>
+  <meta name="description" content="Gilberto Menegoy, advogado OAB/RJ 269.678. Atuação jurídica pautada na ética, estratégia e responsabilidade. Atendimento no Rio de Janeiro e online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-dark: #121c18;
+      --secondary-dark: #1a2421;
+      --gold: #c5b99f;
+      --gold-light: #dfd7c5;
+      --off-white: #fcfbfa;
+      --paper: #ffffff;
+      --text-main: #2b2d2c;
+      --text-muted: #666c69;
+      --line-color: #e6e2db;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "Plus Jakarta Sans", Arial, sans-serif;
+      --shadow: 0 15px 40px rgba(18,28,24,0.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--off-white);color:var(--text-main);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,calc(100% - 44px));margin:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--gold);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:24px;height:1px;background:var(--gold)}
+    h1,h2,h3{font-family:var(--serif);font-weight:600;color:var(--primary-dark);margin:0}
+    h1{font-size:clamp(2.6rem,5.5vw,4.8rem);letter-spacing:-.03em;line-height:1.15}
+    h2{font-size:clamp(2rem,3.8vw,3.2rem);letter-spacing:-.02em;line-height:1.2}
+    h3{font-size:1.35rem}
+    p{margin:0 0 1rem}
+    .section{padding:clamp(70px,8vw,110px) 0}
+    .section-head{max-width:680px;margin-bottom:45px}
+    .section-head .eyebrow{margin-bottom:14px;color: #7b8872;}
+    .section-head p{color:var(--text-muted);font-size:1.02rem;margin-top:14px}
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome para Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        :root {
-            --bg-deep-green: #263D32;
-            --olive-green: #71845A;
-            --off-white: #F4F1E9;
-            --sand: #C5B99F;
-            --sand-light: #E8E3D9;
-            --graphite: #292B29;
-            --white: #FFFFFF;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--off-white);
-            color: var(--graphite);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4, .brand-logo {
-            font-family: 'Cinzel', serif;
-            color: var(--bg-deep-green);
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* --- Header & Navigation --- */
-        header {
-            background-color: var(--bg-deep-green);
-            color: var(--off-white);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 2rem;
-        }
-
-        .brand-logo {
-            color: var(--off-white);
-            font-size: 1.4rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .brand-logo span {
-            display: block;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.75rem;
-            color: var(--sand);
-            font-weight: 400;
-            letter-spacing: 2px;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--off-white);
-            font-size: 0.9rem;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--sand);
-        }
-
-        .btn-contact-header {
-            border: 1px solid var(--sand);
-            padding: 0.5rem 1.2rem;
-            border-radius: 4px;
-            color: var(--sand) !important;
-            transition: var(--transition);
-        }
-
-        .btn-contact-header:hover {
-            background-color: var(--sand);
-            color: var(--bg-deep-green) !important;
-        }
-
-        .mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--off-white);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            background: linear-gradient(135deg, var(--bg-deep-green) 0%, #1c2e26 100%);
-            color: var(--off-white);
-            padding: 5rem 2rem;
-            position: relative;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .hero-tag {
-            display: inline-block;
-            color: var(--sand);
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .hero h1 {
-            color: var(--off-white);
-            font-size: 2.8rem;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            color: rgba(244, 241, 233, 0.85);
-            margin-bottom: 2rem;
-            font-weight: 300;
-        }
-
-        .hero-info-badges {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-            font-size: 0.85rem;
-            color: var(--sand);
-        }
-
-        .hero-info-badges i {
-            margin-right: 0.4rem;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            background-color: var(--sand);
-            color: var(--bg-deep-green);
-            padding: 0.9rem 2rem;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--off-white);
-            transform: translateY(-2px);
-        }
-
-        .hero-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(197, 185, 159, 0.2);
-            padding: 2.5rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .hero-card i {
-            font-size: 2.5rem;
-            color: var(--sand);
-            margin-bottom: 1rem;
-        }
-
-        .hero-card h3 {
-            color: var(--off-white);
-            margin-bottom: 0.8rem;
-        }
-
-        .hero-card p {
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-
-        /* --- Sections General --- */
-        section {
-            padding: 5rem 2rem;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 3.5rem auto;
-        }
-
-        .section-header span {
-            color: var(--olive-green);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-        }
-
-        .section-header h2 {
-            font-size: 2.2rem;
-            margin-top: 0.5rem;
-        }
-
-        .section-header p {
-            color: #666;
-            margin-top: 0.8rem;
-        }
-
-        /* --- Practice Areas --- */
-        .areas-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .area-card {
-            background-color: var(--white);
-            padding: 2.5rem;
-            border-radius: 8px;
-            border: 1px solid rgba(0,0,0,0.05);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            transition: var(--transition);
-        }
-
-        .area-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-            border-color: var(--sand);
-        }
-
-        .area-icon {
-            width: 55px;
-            height: 55px;
-            background-color: var(--off-white);
-            color: var(--bg-deep-green);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .area-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .area-card p {
-            color: #555;
-            font-size: 0.95rem;
-        }
-
-        /* --- Trajectory & Lawyer Intro --- */
-        .trajectory {
-            background-color: var(--white);
-        }
-
-        .trajectory-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .trajectory-text h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .trajectory-text p {
-            margin-bottom: 1.2rem;
-            color: #444;
-            text-align: justify;
-        }
-
-        .trajectory-highlight {
-            border-left: 3px solid var(--olive-green);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            font-style: italic;
-            color: var(--bg-deep-green);
-            font-weight: 500;
-        }
-
-        .experience-box {
-            background: var(--off-white);
-            padding: 2.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--sand-light);
-        }
-
-        .experience-item {
-            display: flex;
-            gap: 1.2rem;
-            margin-bottom: 1.8rem;
-        }
-
-        .experience-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .experience-item i {
-            font-size: 1.3rem;
-            color: var(--olive-green);
-            margin-top: 0.2rem;
-        }
-
-        .experience-item h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .experience-item p {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        /* --- How It Works --- */
-        .process-steps {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .step-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            position: relative;
-            border-top: 4px solid var(--olive-green);
-        }
-
-        .step-number {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            color: var(--sand);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .step-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .step-card p {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        /* --- WhatsApp CTA --- */
-        .cta-whatsapp {
-            background-color: var(--bg-deep-green);
-            color: var(--off-white);
-            text-align: center;
-            border-radius: 12px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .cta-whatsapp h2 {
-            color: var(--off-white);
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-whatsapp p {
-            max-width: 600px;
-            margin: 0 auto 2rem auto;
-            color: rgba(244, 241, 233, 0.85);
-        }
-
-        .btn-whatsapp {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            background-color: #25D366;
-            color: #fff;
-            padding: 1rem 2.5rem;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #20ba5a;
-            transform: translateY(-2px);
-        }
-
-        /* --- Footer --- */
-        footer {
-            background-color: var(--graphite);
-            color: #aaa;
-            padding: 4rem 2rem 2rem 2rem;
-            font-size: 0.9rem;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-brand h3 {
-            color: var(--off-white);
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-brand p {
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .footer-links h4 {
-            color: var(--sand);
-            font-size: 1rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.6rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--off-white);
-        }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 0 auto;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 2rem;
-            text-align: center;
-            font-size: 0.8rem;
-        }
-
-        /* --- Responsive Design --- */
-        @media (max-width: 900px) {
-            .hero-container, .trajectory-container {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--bg-deep-green);
-                padding: 2rem;
-                gap: 1.5rem;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .mobile-toggle {
-                display: block;
-            }
-        }
-    </style>
+    /* Topbar & Header */
+    .topbar{background:var(--primary-dark);color:var(--gold-light);font-size:.76rem}
+    .topbar-inner{min-height:36px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+    header{position:sticky;top:0;z-index:100;background:rgba(252,251,250,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-color)}
+    .nav{height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand-logo-mark{width:46px;height:46px;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:1.1rem;color:var(--primary-dark);background:var(--paper);border-radius:4px;letter-spacing:-.05em}
+    .brand-texts{display:flex;flex-direction:column}
+    .brand-title{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--primary-dark);letter-spacing:.05em}
+    .brand-subtitle{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);margin-top:2px}
+    .nav-links{display:flex;align-items:center;gap:25px;list-style:none;margin:0;padding:0}
+    .nav-links a{font-size:.84rem;font-weight:600;color:var(--text-main);transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--primary-dark);color:var(--off-white)!important;padding:12px 24px;border-radius:4px;font-size:.82rem;font-weight:600;letter-spacing:.03em;transition:all .2s;border:1px solid transparent}
+    .button:hover{background:var(--secondary-dark);border-color:var(--gold);transform:translateY(-2px)}
+    .button-gold{background:var(--gold);color:var(--primary-dark)!important}
+    .button-gold:hover{background:var(--gold-light)}
+    .menu-toggle{display:none;background:none;border:1px solid var(--line-color);border-radius:4px;padding:8px 12px;font-size:1.2rem;cursor:pointer}
+
+    /* Hero */
+    .hero{position:relative;background:linear-gradient(135deg,#f4f2ee 0%,var(--off-white) 70%);padding:clamp(60px,8vw,110px) 0;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:50px;align-items:center}
+    .hero-copy .eyebrow{margin-bottom:20px;color: #55624e;}
+    .hero h1 span{color:#55624e;font-style:italic}
+    .hero-copy p{font-size:1.06rem;color:var(--text-muted);margin:22px 0 30px;max-width:540px}
+    .hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+    .hero-badge-box{display:flex;align-items:center;gap:15px;margin-top:40px;padding-top:20px;border-top:1px solid var(--line-color);font-size:.82rem;color:var(--text-muted)}
+    .hero-badge-box strong{color:var(--primary-dark)}
+    .hero-card{background:var(--primary-dark);color:var(--off-white);padding:45px 35px;border-radius:6px;box-shadow:var(--shadow);position:relative;overflow:hidden;border-top:3px solid var(--gold)}
+    .hero-card h3{color:var(--off-white);font-size:1.6rem;margin-bottom:12px}
+    .hero-card p{color:#d0d7d3;font-size:.92rem;margin:0}
+
+    /* Trust bar */
+    .trust-strip{background:var(--secondary-dark);color:var(--off-white);padding:22px 0}
+    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .trust-item{display:flex;align-items:center;gap:12px;font-size:.84rem}
+    .trust-item i{color:var(--gold);font-size:1.1rem}
+
+    /* Areas */
+    .areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .area-card{background:var(--paper);padding:30px;border:1px solid var(--line-color);border-radius:4px;transition:all .25s}
+    .area-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--gold)}
+    .area-num{font-family:var(--serif);font-size:.9rem;color:var(--gold);margin-bottom:20px;font-weight:600}
+    .area-card h3{margin-bottom:10px}
+    .area-card p{color:var(--text-muted);font-size:.88rem;margin:0}
+
+    /* Sobre & Foto & Versículo */
+    .about{background:var(--paper)}
+    .about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+    .about-profile-wrapper{text-align:center}
+    .about-img{width:240px;height:240px;object-fit:cover;border-radius:50%;margin:0 auto 20px;border:3px solid var(--gold);box-shadow:var(--shadow)}
+    .verse-box{background:var(--off-white);border-left:3px solid var(--gold);padding:20px;margin-top:20px;font-style:italic;font-size:.9rem;color:var(--text-muted);text-align:left}
+    .verse-box strong{display:block;margin-top:8px;font-style:normal;font-family:var(--serif);color:var(--primary-dark);font-size:.82rem;letter-spacing:.05em}
+    .about-copy h2{margin-bottom:20px}
+    .about-copy p{color:var(--text-muted)}
+    .credential-badge{margin-top:20px;padding:15px 20px;background:var(--off-white);border:1px solid var(--line-color);border-radius:4px;display:inline-flex;gap:15px;align-items:center}
+    .credential-badge b{font-family:var(--serif);font-size:1.3rem;color:var(--primary-dark)}
+
+    /* Eventos / Palestras */
+    .events{background:#f4f2ee}
+    .events-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+    .event-card{background:var(--paper);padding:30px;border-radius:4px;border:1px solid var(--line-color)}
+    .event-card h3{margin-bottom:10px;font-size:1.2rem}
+    .event-card p{color:var(--text-muted);font-size:.88rem;margin:0}
+
+    /* Contact */
+    .contact{background:var(--primary-dark);color:var(--off-white)}
+    .contact h2{color:var(--off-white)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+    .contact-info{display:grid;gap:15px}
+    .contact-row{display:flex;gap:15px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:.92rem}
+    .contact-row span{min-width:90px;color:var(--gold);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+    .contact-card-box{background:var(--secondary-dark);padding:35px;border-radius:6px;border:1px solid rgba(197,185,159,0.2)}
+    .contact-card-box h3{color:var(--off-white);margin-bottom:12px}
+    .contact-card-box p{color:#cbd3ce;font-size:.9rem;margin-bottom:20px}
+
+    /* Footer Moderno com Plataformas */
+    footer{background:#0b1210;color:#9aa39e;padding:40px 0 25px;font-size:.8rem}
+    .footer-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;padding-bottom:25px;border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:25px}
+    .footer-platforms{display:flex;gap:15px}
+    .platform-badge{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.06);display:grid;place-items:center;color:var(--off-white);transition:background .2s}
+    .platform-badge:hover{background:var(--gold);color:var(--primary-dark)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+    .footer-bottom a{color:var(--gold);text-decoration:underline}
+
+    .whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:150;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;box-shadow:0 8px 25px rgba(0,0,0,0.25);transition:transform .2s}
+    .whatsapp-float:hover{transform:translateY(-3px)}
+    .whatsapp-float i{font-size:1.6rem}
+
+    @media(max-width:900px){
+      .nav-links{display:none;position:absolute;top:84px;left:0;right:0;background:var(--paper);padding:20px;flex-direction:column;align-items:stretch;box-shadow:var(--shadow);border-bottom:1px solid var(--line-color)}
+      .nav-links.open{display:flex}
+      .menu-toggle{display:block}
+      .hero-grid,.about-grid,.areas-grid,.events-grid,.contact-grid{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="brand-logo">
-                GILBERTO MENEGOY
-                <span>ADVOCACIA E CONSULTORIA</span>
-            </a>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#apresentacao">Apresentação</a></li>
-                <li><a href="#areas">Áreas de Atuação</a></li>
-                <li><a href="#atendimento">Atendimento</a></li>
-                <li><a href="#contato" class="btn-contact-header">Contato</a></li>
-            </ul>
-        </div>
-    </header>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Advocacia Estratégica • Atendimento Personalizado</span>
+      <span>OAB/RJ 269.678 | Rio de Janeiro – RJ</span>
+    </div>
+  </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="apresentacao">
-        <div class="hero-container">
-            <div class="hero-text">
-                <span class="hero-tag">Advocacia Estratégica</span>
-                <h1>Orientação jurídica com responsabilidade, clareza e transparência.</h1>
-                <p>A atuação jurídica exige conhecimento técnico, análise cuidadosa e compreensão profunda das particularidades de cada situação.</p>
-                <div class="hero-info-badges">
-                    <span><i class="fas fa-certificate"></i> OAB/RJ 269.678</span>
-                    <span><i class="fas fa-globe"></i> Presencial e Online</span>
-                </div>
-                <a href="#areas" class="btn-primary">Conheça as Áreas de Atuação</a>
-            </div>
-            <div class="hero-card">
-                <i class="fas fa-balance-scale"></i>
-                <h3>Compromisso Ético</h3>
-                <p>Apresentação institucional pautada pela ética profissional, sem promessas de resultados e com foco no esclarecimento transparente de direitos.</p>
-            </div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#inicio">
+        <div class="brand-logo-mark">G/M</div>
+        <div class="brand-texts">
+          <span class="brand-title">Gilberto Menegoy</span>
+          <span class="brand-subtitle">Advogado</span>
         </div>
+      </a>
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#atuacao">Atuação</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#eventos">Palestras & Eventos</a></li>
+        <li><a class="button button-gold" href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">OAB/RJ 269.678 • Rio de Janeiro</span>
+          <h1>Advocacia pautada na <span>ética,</span> clareza e estratégia.</h1>
+          <p>Orientação jurídica fundamentada e acompanhamento responsável para a defesa dos seus direitos e segurança dos seus negócios.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://wa.me/5521986383729?text=Olá,%20Dr.%20Gilberto,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Falar pelo WhatsApp</a>
+            <a class="button button-gold" href="#atuacao">Áreas de Atuação</a>
+          </div>
+          <div class="hero-badge-box">
+            <i class="fas fa-shield-alt" style="color:var(--gold); font-size:1.2rem;"></i>
+            <div><strong>Compromisso Profissional</strong><br>Atendimento presencial e online com total transparência.</div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Atendimento Humanizado</h3>
+          <p>Soluções jurídicas estruturadas com base na experiência técnica e na atenção direta a cada caso particular.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Trajectory Section -->
-    <section class="trajectory">
-        <div class="trajectory-container">
-            <div class="trajectory-text">
-                <span class="hero-tag" style="color: var(--olive-green);">Trajetória Profissional</span>
-                <h2>Conhecimento técnico alinhado à vivência prática.</h2>
-                <p>Minha trajetória no universo jurídico começou bem antes do exercício formal da advocacia.</p>
-                <p>Ao longo de mais de 15 anos, desenvolvi sólida experiência em rotinas jurídicas e administrativas, gestão contratual, licitações, relações institucionais e acompanhamento de processos administrativos.</p>
-                <div class="trajectory-highlight">
-                    "Essa vivência prática proporciona uma visão abrangente dos conflitos, permitindo construir estratégias jurídicas sólidas e fundamentadas."
-                </div>
-                <p>Hoje, como advogado inscrito na OAB/RJ, direciono toda essa bagagem à orientação preventiva e à atuação defensiva, priorizando a atenção humana às particularidades de cada demanda.</p>
-            </div>
-            <div class="experience-box">
-                <div class="experience-item">
-                    <i class="fas fa-file-contract"></i>
-                    <div>
-                        <h4>Gestão de Contratos e Licitações</h4>
-                        <p>Experiência prática na análise e acompanhamento de instrumentos contratuais e processos administrativos.</p>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <i class="fas fa-building"></i>
-                    <div>
-                        <h4>Rotinas Institucionais</h4>
-                        <p>Atuação direta no ambiente administrativo e corporativo por mais de uma década e meia.</p>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <i class="fas fa-user-shield"></i>
-                    <div>
-                        <h4>Atendimento Personalizado</h4>
-                        <p>Acompanhamento direto e transparente de cada caso do início ao fim.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Trust Strip -->
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item"><i class="fas fa-map-marker-alt"></i><span>Rua da Assembleia, 61 – Centro, RJ</span></div>
+        <div class="trust-item"><i class="fas fa-laptop"></i><span>Atendimento Online Disponível</span></div>
+        <div class="trust-item"><i class="fas fa-certificate"></i><span>Inscrito na OAB/RJ sob nº 269.678</span></div>
+      </div>
+    </div>
 
-    <!-- Practice Areas Section -->
-    <section id="areas">
-        <div class="section-header">
-            <span>Atuação Jurídica</span>
-            <h2>Áreas de Atendimento</h2>
-            <p>Atuação focada na prevenção e resolução de conflitos em núcleos específicos do Direito.</p>
+    <!-- Áreas de Atuação -->
+    <section class="section" id="atuacao">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Especialidades</span>
+          <h2>Áreas de Atuação Jurídica</h2>
+          <p>Atuação focada na prevenção e resolução de litígios, pautada pelo rigor técnico e pela ética.</p>
         </div>
         <div class="areas-grid">
-            <div class="area-card">
-                <div class="area-icon"><i class="fas fa-handshake"></i></div>
-                <h3>Direito Civil e Contratos</h3>
-                <p>Elaboração e análise de contratos, responsabilidade civil, obrigações, indenizações e resolução de conflitos patrimoniais.</p>
-            </div>
-            <div class="area-card">
-                <div class="area-icon"><i class="fas fa-users"></i></div>
-                <h3>Família e Sucessões</h3>
-                <p>Orientação em divórcios, união estável, fixação e revisão de alimentos, guarda, partilha de bens e inventários.</p>
-            </div>
-            <div class="area-card">
-                <div class="area-icon"><i class="fas fa-briefcase"></i></div>
-                <h3>Empresarial e Administrativo</h3>
-                <p>Suporte jurídico para empresas, relações comerciais, licitações públicas e contratos com a administração pública.</p>
-            </div>
-            <div class="area-card">
-                <div class="area-icon"><i class="fas fa-user-tie"></i></div>
-                <h3>Direito do Trabalho</h3>
-                <p>Análise de relações de trabalho, direitos rescisórios e orientação quanto às obrigações do vínculo empregatício.</p>
-            </div>
-            <div class="area-card">
-                <div class="area-icon"><i class="fas fa-heartbeat"></i></div>
-                <h3>Previdenciário e Assistencial</h3>
-                <p>Orientação e requerimentos de benefícios previdenciários, aposentadorias, pensões e benefício assistencial (BPC/LOAS).</p>
-            </div>
-            <div class="area-card">
-                <div class="area-icon"><i class="fas fa-shield-alt"></i></div>
-                <h3>Consultoria Preventiva</h3>
-                <p>Análise de riscos legais antes da tomada de decisões para evitar litígios futuros e garantir segurança jurídica.</p>
-            </div>
+          <div class="area-card">
+            <div class="area-num">01</div>
+            <h3>Direito Civil e Contratos</h3>
+            <p>Elaboração e revisão de contratos, responsabilidade civil, obrigações e resolução de conflitos patrimoniais.</p>
+          </div>
+          <div class="area-card">
+            <div class="area-num">02</div>
+            <h3>Família e Sucessões</h3>
+            <p>Divórcio, união estável, alimentos, guarda, partilha de bens, inventários e planejamento sucessório.</p>
+          </div>
+          <div class="area-card">
+            <div class="area-num">03</div>
+            <h3>Empresarial e Administrativo</h3>
+            <p>Suporte jurídico a negócios, licitações públicas, contratos administrativos e rotinas corporativas.</p>
+          </div>
+          <div class="area-card">
+            <div class="area-num">04</div>
+            <h3>Direito do Trabalho</h3>
+            <p>Análise de vínculos empregatícios, verbas rescisórias, direitos e obrigações trabalhistas.</p>
+          </div>
+          <div class="area-card">
+            <div class="area-num">05</div>
+            <h3>Direito Previdenciário</h3>
+            <p>Requerimentos e análise de benefícios previdenciários, aposentadorias e revisões perante o INSS.</p>
+          </div>
+          <div class="area-card">
+            <div class="area-num">06</div>
+            <h3>Direito do Consumidor</h3>
+            <p>Defesa de direitos em relações de consumo, cobranças indevidas e falhas na prestação de serviços.</p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section id="atendimento" style="background-color: var(--white);">
-        <div class="section-header">
-            <span>Metodologia</span>
-            <h2>Como Funciona o Atendimento</h2>
-            <p>Um fluxo simples e transparente para que você tenha total clareza em todas as etapas.</p>
+    <!-- Sobre o Advogado + Foto + Versículo -->
+    <section class="section about" id="sobre">
+      <div class="container about-grid">
+        <div class="about-profile-wrapper">
+          <!-- SUA FOTO ADICIONADA AQUI -->
+          <img src="54d918fd-da92-4d1c-8c03-234c833cee68.jpeg" alt="Gilberto Menegoy Advogado" class="about-img">
+          
+          <!-- VERSÍCOLO SOLICITADO -->
+          <div class="verse-box">
+            "Mas buscai primeiro o Reino de Deus, e a sua justiça, e todas estas coisas vos serão acrescentadas."
+            <strong>Mateus 6:33</strong>
+          </div>
         </div>
-        <div class="process-steps">
-            <div class="step-card">
-                <div class="step-number">01</div>
-                <h3>Primeiro Contato</h3>
-                <p>Apresentação inicial da situação via formulário ou WhatsApp para identificação da necessidade jurídica.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">02</div>
-                <h3>Análise Documental</h3>
-                <p>Avaliação cuidadosa das informações e dos documentos pertinentes ao caso trazido.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">03</div>
-                <h3>Orientação Técnica</h3>
-                <p>Esclarecimento das alternativas legais, caminhos possíveis, riscos e procedimentos aplicáveis.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">04</div>
-                <h3>Acompanhamento</h3>
-                <p>Condução transparente da demanda contratada, com reporte periódico sobre o andamento.</p>
-            </div>
+        <div class="about-copy">
+          <span class="eyebrow">Perfil Profissional</span>
+          <h2>Gilberto Menegoy</h2>
+          <p>Advogado inscrito na Ordem dos Advogados do Brasil, Seccional do Rio de Janeiro (OAB/RJ 269.678).</p>
+          <p>Reúne sólida vivência em rotinas jurídicas e administrativas, gestão de contratos e acompanhamento de processos, unindo o conhecimento teórico à prática estratégica para oferecer segurança aos clientes.</p>
+          <div class="credential-badge">
+            <b>OAB/RJ</b>
+            <span>Inscrição nº 269.678<br>Seccional Rio de Janeiro</span>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- CTA / Contact Section -->
-    <section id="contato">
-        <div class="cta-whatsapp">
-            <h2>Deseja solicitar uma orientação jurídica?</h2>
-            <p>Entre em contato para agendar uma consulta presencial ou atendimento virtual.</p>
-            <!-- ALTEIR AQUI SEU NÚMERO SEGUINDO O PADRÃO GERADO ANTERIORMENTE -->
-            <a href="https://wa.me/5521986383729?text=Olá,%20Dr.%20Gilberto,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> Falar pelo WhatsApp
-            </a>
+    <!-- Espaço para Palestras e Eventos -->
+    <section class="section events" id="eventos">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Atividade Acadêmica</span>
+          <h2>Palestras e Eventos</h2>
+          <p>Participação em palestras, debates e eventos jurídicos voltados ao compartilhamento de conhecimento e atualização profissional.</p>
         </div>
+        <div class="events-grid">
+          <div class="event-card">
+            <h3>Palestras e Debates Jurídicos</h3>
+            <p>Abordagem de temas contemporâneos do direito, contratos e rotinas administrativas voltadas ao público corporativo e acadêmico.</p>
+          </div>
+          <div class="event-card">
+            <h3>Capacitação e Atualização</h3>
+            <p>Presença constante em eventos de atualização jurídica e debates sobre reformas legislativas e tendências do mercado legal.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h3>Gilberto Menegoy Advogado</h3>
-                <p>Inscrito na Ordem dos Advogados do Brasil — Seccional Rio de Janeiro sob o nº 269.678.</p>
-                <p>Atuação pautada na ética, responsabilidade técnica e transparência nas relações profissionais.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="#apresentacao">Apresentação</a></li>
-                    <li><a href="#areas">Áreas de Atuação</a></li>
-                    <li><a href="#atendimento">Como Funciona</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Atendimento</h4>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> Rio de Janeiro / RJ</li>
-                    <li><i class="fas fa-globe"></i> Atendimento Online</li>
-                    <li><i class="fas fa-gavel"></i> OAB/RJ 269.678</li>
-                </ul>
-            </div>
+    <!-- Contato -->
+    <section class="section contact" id="contato">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" style="color:var(--gold);">Fale Conosco</span>
+          <h2>Canais de Atendimento</h2>
+          <p>Entre em contato para agendar sua consulta ou tirar dúvidas sobre o seu caso.</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Gilberto Menegoy Advogado. Todos os direitos reservados. Informações fornecidas de acordo com o Provimento 205/2021 da OAB.</p>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-row"><span>WhatsApp</span><a href="https://wa.me/5521986383729?text=Olá,%20Dr.%20Gilberto,%20vim%20pelo%20site." target="_blank" rel="noopener">(21) 98638-3729</a></div>
+            <div class="contact-row"><span>E-mail</span><a href="mailto:gmenegoyadv@gmail.com">gmenegoyadv@gmail.com</a></div>
+            <div class="contact-row"><span>Endereço</span><span>Rua da Assembleia, nº 61, 9º andar – Centro, Rio de Janeiro/RJ</span></div>
+          </div>
+          <div class="contact-card-box">
+            <h3>Atendimento Direto</h3>
+            <p>Clique abaixo para iniciar uma conversa rápida via WhatsApp com mensagem pré-configurada.</p>
+            <a class="button button-gold" href="https://wa.me/5521986383729?text=Olá,%20Dr.%20Gilberto,%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Iniciar Conversa</a>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- Script para abrir/fechar menu mobile -->
-    <script>
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navLinks = document.getElementById('navLinks');
+  </main>
 
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+  <!-- Rodapé Mais Organizado com Logos das Plataformas -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <strong>Gilberto Menegoy Advogado</strong>
+          <p style="margin:5px 0 0; font-size:.78rem; color:#828c87;">OAB/RJ 269.678 • Todos os direitos reservados.</p>
+        </div>
+        <div class="footer-platforms">
+          <a class="platform-badge" href="https://www.instagram.com/gilbertomenegoy/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a class="platform-badge" href="https://www.linkedin.com/in/gilberto-menegoy-03b5b821b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a class="platform-badge" href="https://wa.me/5521986383729" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Conteúdo informativo em conformidade com o Provimento 205/2021 da OAB.</p>
+        <p><a href="https://www.oab.org.br" target="_blank" rel="noopener">Conselho Federal da OAB</a></p>
+      </div>
+    </div>
+  </footer>
 
-        // Fechar menu ao clicar num link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
+  <a class="whatsapp-float" href="https://wa.me/5521986383729?text=Olá,%20Dr.%20Gilberto,%20gostaria%20de%20informações." target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => navLinks.classList.remove("open"));
+    });
+  </script>
 </body>
 </html>
